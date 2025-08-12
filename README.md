@@ -1,19 +1,22 @@
-# 🎈 Blank app template
+# Trainer Payout Web App (Streamlit)
 
-A simple Streamlit app template for you to modify!
+A lightweight internal web platform for managing personal trainer payouts at your gym.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Features
+- Agreements: client ↔ trainer packages (session length, price)
+- Attendance: log sessions; revenue = sum(attended × price)
+- Dashboard: per‑trainer revenue, YTD, and projections; adjustable split (70/30 default) or custom
+- Payouts: monthly payout/retain calculations
+- Settings: global assumptions (retention, growth, months ahead), and trainer default splits
 
-### How to run it on your own machine
-
-1. Install the requirements
-
+## Quick Start
+1. Install requirements
+   ```bash
+   pip install -r requirements.txt
    ```
-   $ pip install -r requirements.txt
-   ```
-
 2. Run the app
+   ```bash
+   streamlit run app.py
+   ```
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+The app creates a local SQLite database at `trainer_payout.db` on first run with demo data.
